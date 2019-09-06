@@ -1,6 +1,8 @@
 package linklist;
 
 
+import static linklist.Node.printNode;
+
 /*
  *  @描述：使用单链表实现堆栈;链表反转示例;
  */
@@ -32,7 +34,7 @@ public class LinkListOne {
         node1.next = node2;
         node2.next = node3;
         printNode(node);
-        Node<String> reverse = reverse(node);
+        Node<String> reverse = reverse1(node);
         printNode(reverse);
     }
 
@@ -47,15 +49,20 @@ public class LinkListOne {
         return reverse;
     }
 
-    public static <T> void printNode(Node<T> node){
-        StringBuilder builder = new StringBuilder();
-        while (node.next != null) {
-            builder.append(node.element);
-            node = node.next;
+    public static <T> Node<T> reverse1(Node<T> head) {
+        Node<T> prev = null;
+        Node<T> next;
+        while (head != null) {
+            next = head.next;
+            head.next = prev;
+            prev = head;
+            head = next;
+
         }
-        builder.append(node.element);
-        System.out.println(builder.toString());
+        return prev;
     }
+
+
     class LinkListStack<T> {
         //当前节点
         private Node<T> mNode;
