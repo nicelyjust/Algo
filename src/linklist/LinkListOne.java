@@ -83,9 +83,4 @@ public class LinkListOne {
             return mNode == null;
         }
     }
-
-    public static class Node<E> {
-        public E element;
-        public Node<E> next;
-    }
 }
