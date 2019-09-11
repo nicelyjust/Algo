@@ -7,8 +7,8 @@ package tree;
  * @CreateTime 2019/9/9 15:46
  **/
 public class BinaryTree<T extends Comparable<T>> {
-    public BinaryTree<T> left;
-    public BinaryTree<T> right;
+    private BinaryTree<T> left;
+    private BinaryTree<T> right;
     public T data;
 
     public BinaryTree() {
@@ -22,11 +22,37 @@ public class BinaryTree<T extends Comparable<T>> {
         this.data = data;
     }
 
+    public BinaryTree<T> getLeft() {
+        return left;
+    }
+
+    public void setLeft(BinaryTree<T> left) {
+        this.left = left;
+    }
+
+    public BinaryTree<T> getRight() {
+        return right;
+    }
+
+    public void setRight(BinaryTree<T> right) {
+        this.right = right;
+    }
+
     /**
      * 判断是否是叶子结点
      * @return
      */
     public boolean isLeaf(){
         return this.left == null && this.right == null;
+    }
+
+    public void preOder(){
+
+    }
+    public void midOder(){
+        System.out.println(data);
+    }
+    public void afterOder(){
+
     }
 }
