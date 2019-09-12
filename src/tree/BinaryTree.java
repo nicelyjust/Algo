@@ -47,12 +47,30 @@ public class BinaryTree<T extends Comparable<T>> {
     }
 
     public void preOder(){
-
+        System.out.println(data);
+        if (left != null) {
+            left.preOder();
+        }
+        if (right != null) {
+            right.preOder();
+        }
     }
     public void midOder(){
+        if (left != null) {
+            left.midOder();
+        }
         System.out.println(data);
+        if (right != null) {
+            right.midOder();
+        }
     }
     public void afterOder(){
-
+        if (left != null) {
+            left.afterOder();
+        }
+        if (right != null) {
+            right.afterOder();
+        }
+        System.out.println(data);
     }
 }
