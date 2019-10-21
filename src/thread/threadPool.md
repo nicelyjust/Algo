@@ -24,4 +24,4 @@ Android开发中主线程不能执行耗时任务,耗时以及IO操作都需要�
 - handler:异常处理器
 
 ###### 线程池的主要处理流程
-![image](/pictures/线程池任务添加流程.png)
+![image](https://github.com/nicelyjust/Algo/blob/release/v1.0.0/pictures/threadPool.jpg)
