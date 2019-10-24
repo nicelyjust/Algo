@@ -1,6 +1,4 @@
-package thread;
-
-import java.util.concurrent.ThreadPoolExecutor;
+package concurrent.thread;
 
 /**
  * @Desc 实现runnable接口

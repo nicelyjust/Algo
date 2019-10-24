@@ -1,4 +1,4 @@
-package thread;
+package concurrent.thread;
 
 /**
  * @Desc 继承Thread,实现run方法,Thread实现了runnable接口
@@ -16,7 +16,7 @@ public class FirstThread extends Thread{
     @Override
     public void run() {
         for (; i < 100; i++) {
-            if (i % 2 == 0)
+            //if (i % 2 == 0)
                 System.out.println(getName() + "  " + i);
         }
     }
