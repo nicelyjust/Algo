@@ -18,7 +18,7 @@ public class Father {
         this.fatherAge = fatherAge;
     }
 
-    public String getFatherName() {
+    private String getFatherName() {
         return fatherName;
     }
 
