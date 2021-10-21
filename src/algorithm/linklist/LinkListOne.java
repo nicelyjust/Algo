@@ -34,7 +34,7 @@ public class LinkListOne {
         node1.next = node2;
         node2.next = node3;
         printNode(node);
-        Node<String> reverse = reverse1(node);
+        Node<String> reverse = reverse(node);
         printNode(reverse);
     }
 
