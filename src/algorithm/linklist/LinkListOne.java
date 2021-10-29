@@ -21,23 +21,26 @@ public class LinkListOne {
 
         System.out.println(algorithm.stack.pop());*/
 
-        Node<String> node = new Node<>();
-        node.element = "Q";
-        Node<String> node1 = new Node<>();
-        node1.element = "W";
-        Node<String> node2 = new Node<>();
-        node2.element = "E";
-        Node<String> node3 = new Node<>();
-        node3.element = "R";
+        Node<Integer> node = new Node<>();
+        node.element = 1;
+        Node<Integer> node1 = new Node<>();
+        node1.element = 2;
+        Node<Integer> node2 = new Node<>();
+        node2.element = 3;
+        Node<Integer> node3 = new Node<>();
+        node3.element = 4;
 
         node.next = node1;
         node1.next = node2;
         node2.next = node3;
         printNode(node);
-        Node<String> reverse = reverse(node);
+        Node<Integer> reverse = reverse(node);
         printNode(reverse);
     }
 
+    /**
+     * 陷入细节就乱,
+     */
     public static <T> Node<T> reverse(Node<T> node) {
         if (node == null || node.next == null) {
             return node;
